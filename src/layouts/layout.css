@@ -1,0 +1,15 @@
+.rotateLogo{
+    transform: rotate(270deg);
+}
+
+
+.heading-width{
+    width:150px  ; 
+    text-align: center;
+}
+
+@media ( max-width:600px){
+    .heading-width{
+        width: 90px;
+    }
+}

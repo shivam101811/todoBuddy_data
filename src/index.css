@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+nav{position: sticky !important;
+top:0;
+left:0;
+z-index: 10;
+flex-wrap: nowrap;}
+
+
+.no-data-img{
+  width:400px;
+  border-radius:30%;
+}
+
+.toggle[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 18px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.toggle[type="checkbox"]::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: 0.5s;
+}
+
+.toggle[type="checkbox"]:checked::before {
+  transform: translateX(100%);
+  background: white;
+
+}
+
+.toggle[type="checkbox"]:checked {
+  background: black;
+}
+
+
+.todo-container{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+ .todo-row {
+  
+  color: #fff ;
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+  display:flex;
+  align-items: stretch;
+}
+.width-box{
+  width:32%;
+
+}
+
+.bg-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+/* Styles for the loader container */
+.loaderbtn-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  /* padding: 5px 10px; */
+  width: 100%;
+  height: 50vh;
+  cursor: no-drop;
+}
+
+/* Loader animation styles */
+.loaderbtn {
+  border: 2px solid #f3f3f3;
+  border-top: 4px solid #0c0c0c;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Loader animation keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media(max-width:1045px){
+  .width-box{
+    width: 48%;
+  }
+}
+@media(max-width:780px){
+  .width-box{
+    width: 100%;
+  }
+}
+
+@media(max-width:600px){
+  .no-data-img{
+    width: 200px;
+    margin: 15px!important;
+  }
+}
